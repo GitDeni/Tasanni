@@ -1,9 +1,59 @@
 *,
 *::before,
 *::after {
-	box-sizing: inherit;
+	margin: 0;
+	outline: none;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 html {
 	box-sizing: border-box;
+}
+
+body {
+	font-family: "Montserrat-SemiBold";
+}
+
+a {
+	display: block;
+	text-decoration: none;
+}
+
+.site-container {
+	position: relative;
+	overflow: hidden;
+}
+
+.container {
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 0 auto;
+	width: vw(1200);
+
+	@include mobile {
+		padding: 0 vmin(20);
+		width: 100%;
+	}
+}
+
+.tab-pane {
+	display: none;
+}
+
+.faded {
+	opacity: 0;
+	transition: all 1s;
+}
+
+.faded.in {
+	opacity: 1;
+	transition: all 1s;
+}
+
+.tab-pane.active {
+	display: flex;
+	justify-content: space-between;
 }
