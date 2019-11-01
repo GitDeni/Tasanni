@@ -12,12 +12,22 @@ html {
 }
 
 body {
+	height: 100vh;
 	font-family: "Montserrat-SemiBold";
+	background-image: url("../images/1st_screen-min.png");
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 
 a {
 	display: block;
 	text-decoration: none;
+	color: #000;
+}
+
+ul {
+	display: flex;
+	list-style: none;
 }
 
 .site-container {
@@ -31,12 +41,18 @@ a {
 	flex-wrap: wrap;
 	justify-content: center;
 	margin: 0 auto;
-	width: vw(1200);
+	width: vw(1220);
 
 	@include mobile {
 		padding: 0 vmin(20);
 		width: 100%;
 	}
+}
+
+.tabs {
+	display: flex;
+	justify-content: center;
+	width: 100%;
 }
 
 .tab-pane {
@@ -55,5 +71,38 @@ a {
 
 .tab-pane.active {
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
+}
+
+.logo {
+	border-radius: vw(5);
+	padding: vw(10);
+	width: vw(150);
+	height: vw(140);
+	background-color: rgb(57, 56, 56);
+}
+
+.stiched-wrapper_orange {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 2px dashed $orange;
+	border-radius: vw(5);
+	width: 100%;
+	height: 100%;
+}
+
+.logo-bg {
+	border-radius: 50%;
+	width: vw(100);
+	height: vw(100);
+	background-image: url("../images/logologo.svg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color: $orange;
+
+	img {
+		width: 100%;
+		height: 100%;
+	}
 }

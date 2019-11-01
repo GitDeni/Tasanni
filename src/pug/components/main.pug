@@ -1,0 +1,52 @@
+section.main
+	.container
+		.tabs
+			.tab-pane.main-pane.catalog-pane.faded#catalog-pane
+				.catalog-pane__dotted-wrapper
+					.catalog-pane__header
+						a(href="#women").active
+							| women
+						a(href="#men")
+							| men
+					.catalog-pane__main
+						.tab-pane.women-pane.faded.in.active#women
+							.button-prev
+							.women-swiper
+								.swiper-slide
+									img(src="../images/w-1.png", alt="")
+								.swiper-slide
+									img(src="../images/w-2.png", alt="")
+								.swiper-slide
+									img(src="../images/w-3.png", alt="")
+								.swiper-slide
+									img(src="../images/w-1.png", alt="")
+								.swiper-slide
+									img(src="../images/w-2.png", alt="")
+							.button-next
+						.tab-pane.men-pane.faded#men
+							.button-prev
+							.catalog-swiper
+								.swiper-slide
+								.swiper-slide
+								.swiper-slide
+								.swiper-slide
+								.swiper-slide
+							.button-next
+			.tab-pane.main-pane.about-pane.faded.in.active#about-pane
+				.about-pane__dotted-wrapper
+					article.about-us
+						h1
+							| Lorem ipsum dolor sit amet
+						p
+							| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eleifend felis leo, eget ornare nisl ultricies at. Curabitur blandit justo sit amet lectus dictum dapibus.
+						p
+							| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eleifend felis leo, eget ornare nisl ultricies at. Curabitur blandit justo sit amet lectus dictum dapibus.
+					article.about-us
+						p
+							| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eleifend felis leo, eget ornare nisl ultricies at. Curabitur blandit justo sit amet lectus dictum dapibus.
+						p
+							| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eleifend felis leo, eget ornare nisl ultricies at. Curabitur blandit justo sit amet lectus dictum dapibus. Etiam eget odio cursus, egestas urna quis, cursus ipsum. Nulla vehicula pharetra porttitor.
+			.tab-pane.main-pane.contacts-pane.faded#contacts-pane
+				.contacts-pane__dotted-wrapper
+					.social-contacts
+					.address
