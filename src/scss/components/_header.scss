@@ -1,19 +1,20 @@
 .header {
-	margin-bottom: vw(100);
-	padding-top: vw(10);
-	padding-bottom: vw(10);
+	margin-bottom: vw(60);
+	padding-top: vw(5);
+	padding-bottom: vw(5);
 	background-color: rgba(255, 255, 255, 0.6);
 
 	.stitched-wrapper {
-		border-top: 2px dashed #000;
-		border-bottom: 2px dashed #000;
-		padding-top: vw(20);
-		padding-bottom: vw(20);
+		border-top: 1px dashed #000;
+		border-bottom: 1px dashed #000;
+		padding-top: vw(10);
+		padding-bottom: vw(10);
 	}
 
 	.container {
 		align-items: center;
 		justify-content: space-between;
+		padding: 0 vw(80);
 	}
 
 	.nav {
@@ -46,11 +47,12 @@
 		}
 
 		.dropdown {
-			display: flex;
-			align-items: center;
+			position: relative;
 			padding-bottom: vw(10);
 
 			a {
+				display: flex;
+				align-items: center;
 				padding-bottom: 0;
 				background: none;
 			}
@@ -66,9 +68,27 @@
 				transition: fill 0.3s;
 			}
 
-			&:hover svg {
+			.default:hover svg {
 				fill: $orange;
 			}
 		}
+	}
+
+	.extras {
+		position: absolute;
+		top: vw(25);
+		display: none;
+		flex-flow: column;
+		opacity: 0;
+		transition: opacity 0.3s;
+
+		a {
+			margin-bottom: vw(5);
+		}
+	}
+
+	.dropdown:hover .extras {
+		display: flex;
+		opacity: 1;
 	}
 }

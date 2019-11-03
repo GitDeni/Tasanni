@@ -1,4 +1,5 @@
 import {swiper1} from "../js/slider";
+import {swiper2} from "../js/slider";
 
 $('body').on('click', '.tab-nav_main', function () {
 
@@ -8,8 +9,23 @@ $('body').on('click', '.tab-nav_main', function () {
 	$('.main-pane').removeClass('active').removeClass('in');
 	$(href).addClass('active');
 	swiper1.update();
-	// swiper2.update();
-	// swiper3.update();
+	swiper2.update();
+	setTimeout(function () {
+		$(href).addClass('in');
+	}, 200);
+
+	return false;
+});
+
+$('body').on('click', '.inner-nav', function () {
+
+	$('.inner-nav').removeClass('active');
+	$(this).addClass('active');
+	var href = $(this).attr('href');
+	$('.inner-pane').removeClass('active').removeClass('in');
+	$(href).addClass('active');
+	swiper1.update();
+	swiper2.update();
 	setTimeout(function () {
 		$(href).addClass('in');
 	}, 200);

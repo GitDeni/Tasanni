@@ -1,15 +1,115 @@
 .contacts-pane {
 	border-radius: vw(5);
-	padding: vw(10);
+	padding: vw(5);
 	width: 100%;
 	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
 	background-color: rgba(255, 255, 255, 0.6);
 
 	&__dotted-wrapper {
+		display: flex;
 		border: 1px dotted #000;
 		border-radius: vw(5);
-		padding: vw(55) 0;
+		padding: vw(40) 0;
 		width: 100%;
 		height: 100%;
+	}
+
+	.social-contacts {
+		border-right: vw(4) solid $orange;
+		padding-left: vw(120);
+		width: 50%;
+		height: 100%;
+
+		&__box {
+			display: flex;
+			align-items: center;
+			margin-bottom: vw(40);
+			border: 1px dashed #000;
+			border-radius: vw(5);
+			padding: vw(20) vw(30);
+			max-width: vw(360);
+			transition: border-color 0.3s;
+		}
+
+		.social-logo {
+			margin-right: vw(20);
+			width: vw(50);
+			height: vw(50);
+
+			svg {
+				width: 100%;
+				transition: fill 0.3s;
+			}
+		}
+
+		.social-number {
+			font-size: vw(18);
+			transition: color 0.3s;
+		}
+
+		.insta-link:hover {
+			border: 1px dashed #E4405F;
+		}
+
+		.insta-link:hover .social-logo svg {
+			fill: #E4405F;
+		}
+
+		.insta-link:hover .social-number {
+			color: #E4405F;
+		}
+
+		.whatsapp-link:hover {
+			border: 1px dashed rgb(23, 133, 63);
+		}
+
+		.whatsapp-link:hover .social-logo svg {
+			fill: rgb(23, 133, 63);
+		}
+
+		.whatsapp-link:hover .social-number {
+			color: rgb(23, 133, 63);
+		}
+
+		.phone-link:hover {
+			border: 1px dashed rgb(35, 8, 189);
+		}
+
+		.phone-link:hover .social-logo svg {
+			fill: rgb(35, 8, 189);
+		}
+
+		.phone-link:hover .social-number {
+			color: rgb(35, 8, 189);
+		}
+
+		.phone-link svg {
+			width: 90%;
+		}
+	}
+
+	.address {
+		display: flex;
+		flex-flow: column;
+		align-items: center;
+		width: 50%;
+
+		.text {
+			margin-bottom: vw(40);
+			width: 70%;
+			font-size: vw(18);
+			line-height: vw(36);
+			letter-spacing: vw(1.3);
+			text-align: center;
+		}
+
+		&-logo {
+			width: vw(200);
+			height: vw(200);
+
+			img {
+				width: 100%;
+			}
+		}
 	}
 }
