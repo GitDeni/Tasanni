@@ -80,6 +80,13 @@ ul {
 	width: vw(100);
 	height: vw(100);
 	background-color: rgb(57, 56, 56);
+
+	@include mobile {
+		border-radius: vmin(5);
+		padding: vmin(5);
+		width: vmin(100);
+		height: vmin(100);
+	}
 }
 
 .stiched-wrapper_orange {
@@ -91,6 +98,11 @@ ul {
 	padding: vw(5);
 	width: 100%;
 	height: 100%;
+
+	@include mobile {
+		border-radius: vmin(5);
+		padding: vmin(5);
+	}
 }
 
 .logo-bg {

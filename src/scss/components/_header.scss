@@ -4,11 +4,22 @@
 	padding-bottom: vw(5);
 	background-color: rgba(255, 255, 255, 0.6);
 
+	@include mobile {
+		margin-bottom: vmin(30);
+		padding-top: vmin(5);
+		padding-bottom: vmin(5);
+	}
+
 	.stitched-wrapper {
 		border-top: 1px dashed #000;
 		border-bottom: 1px dashed #000;
 		padding-top: vw(10);
 		padding-bottom: vw(10);
+
+		@include mobile {
+			padding-top: vmin(10);
+			padding-bottom: vmin(10);
+		}
 	}
 
 	.container {
@@ -25,6 +36,11 @@
 		justify-content: space-between;
 		width: 100%;
 
+		@include mobile {
+			flex-wrap: wrap;
+			padding-top: vmin(10);
+		}
+
 		li {
 			a {
 				padding-bottom: vw(10);
@@ -38,10 +54,27 @@
 				transition: background-size 0.3s, color 0.3s;
 				cursor: pointer;
 
+				@include mobile {
+					margin-bottom: vmin(10);
+					padding-bottom: vmin(5);
+					font-size: vmin(18);
+					letter-spacing: vmin(1.2);
+				}
+
 				&:hover,
 				&.active {
 					color: $orange;
 					background-size: 100% vw(2);
+
+					@include mobile {
+						background-size: 100% vmin(2);
+					}
+				}
+			}
+
+			&:first-child {
+				@include mobile {
+					order: -2;
 				}
 			}
 		}
@@ -49,6 +82,10 @@
 		.dropdown {
 			position: relative;
 			padding-bottom: vw(10);
+
+			@include mobile {
+				order: -1;
+			}
 
 			a {
 				display: flex;
@@ -66,6 +103,12 @@
 				width: vw(15);
 				height: vw(9);
 				transition: fill 0.3s;
+
+				@include mobile {
+					margin-left: vmin(10);
+					width: vmin(15);
+					height: vmin(9);
+				}
 			}
 
 			.default:hover svg {
@@ -82,8 +125,16 @@
 		opacity: 0;
 		transition: opacity 0.3s;
 
+		@include mobile {
+			top: vmin(30);
+		}
+
 		a {
 			margin-bottom: vw(5);
+
+			@include mobile {
+				margin-bottom: vmin(5);
+			}
 		}
 	}
 

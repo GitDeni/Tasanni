@@ -5,13 +5,13 @@ var swiper1 = new Swiper ('.women-swiper', {
 	slidesPerView: 1,
 	spaceBetween: 30,
 	loop: true,
-	simulateTouch: false,
+	simulateTouch: true,
 	// lazy: {
 	// 	loadPrevNext: true,
 	// 	loadOnTransitionStart: true,
 	// },
 	breakpoints: {
-		1024: {
+		1025: {
 			slidesPerView: 3,
 			spaceBetween: 100,
 		},
@@ -27,7 +27,7 @@ var swiper2 = new Swiper ('.men-swiper', {
 	slidesPerView: 1,
 	spaceBetween: 30,
 	loop: true,
-	simulateTouch: false,
+	simulateTouch: true,
 	// lazy: {
 	// 	loadPrevNext: true,
 	// 	loadOnTransitionStart: true,
